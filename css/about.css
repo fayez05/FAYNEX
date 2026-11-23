@@ -1,0 +1,245 @@
+
+/* ==================== About Hero Section ==================== */
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
+    min-height: 440px;
+    background: linear-gradient(135deg, #041e54, #2563EB);
+    color: white;
+    overflow: hidden;
+}
+
+.about-hero-content {
+    flex: 1;
+    max-width: 570px;
+}
+
+.about-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #BFDBFE;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-hero-content h1 {
+    margin-bottom: 22px;
+    font-size: 52px;
+    line-height: 1.2;
+}
+
+.about-hero-content h1 span {
+    display: block;
+    color: #BFDBFE;
+}
+
+.about-hero-content p {
+    margin-bottom: 30px;
+    color: #E5E7EB;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-shop-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background: white;
+    color: #2563EB;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.about-shop-btn:hover {
+    background: #DBEAFE;
+    transform: translateY(-3px);
+}
+
+.about-hero-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-image img {
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* ==================== Who We Are Section ==================== */
+
+.who-we-are {
+    padding: 90px 8%;
+    background: #fff;
+}
+
+.who-we-are-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.who-we-are-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 25px;
+    background: #F1F5F9;
+    border-radius: 20px;
+}
+
+.who-we-are-image img {
+    width: 100%;
+    max-width: 420px;
+    height: 320px;
+    object-fit: contain;
+}
+
+.who-we-are-content {
+    flex: 1;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #2563EB;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.who-we-are-content h2 {
+    margin-bottom: 22px;
+    color: #111827;
+    font-size: 36px;
+    line-height: 1.35;
+}
+
+.who-we-are-content p {
+    margin-bottom: 16px;
+    color: #64748B;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ==================== Responsive ==================== */
+
+@media (max-width: 992px) {
+
+    .about-hero {
+        gap: 30px;
+        padding: 65px 5%;
+    }
+
+    .about-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .who-we-are {
+        padding: 70px 5%;
+    }
+
+    .who-we-are-container {
+        gap: 35px;
+    }
+
+    .who-we-are-content h2 {
+        font-size: 30px;
+    }
+
+    .why-choose-us {
+        padding: 70px 5%;
+    }
+
+    .features-container {
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 28px 18px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        flex-direction: column;
+        gap: 35px;
+        padding: 55px 5%;
+        text-align: center;
+    }
+
+    .about-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .about-hero-content p {
+        font-size: 16px;
+    }
+
+    .about-hero-image img {
+        height: 250px;
+    }
+
+    .who-we-are {
+        padding: 55px 5%;
+    }
+
+    .who-we-are-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .who-we-are-image {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .who-we-are-image img {
+        height: 250px;
+    }
+
+    .who-we-are-content h2 {
+        font-size: 29px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    .about-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .about-hero-image img {
+        height: 210px;
+    }
+
+    .who-we-are-content h2 {
+        font-size: 26px;
+    }
+
+
+}

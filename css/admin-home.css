@@ -1,0 +1,566 @@
+/*==================================================
+                STATISTICS CARDS
+==================================================*/
+
+.stats-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:30px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.stat-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+}
+
+.blue{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+}
+
+.green{
+
+    background:#DCFCE7;
+
+    color:#16A34A;
+
+}
+
+.purple{
+
+    background:#EDE9FE;
+
+    color:#7C3AED;
+
+}
+
+.orange{
+
+    background:#FEF3C7;
+
+    color:#F59E0B;
+
+}
+
+.stat-card span{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.stat-card h2{
+
+    margin:8px 0;
+
+    font-size:30px;
+
+    color:#111827;
+
+}
+
+.stat-card small{
+
+    color:#16A34A;
+
+    font-size:13px;
+
+}
+
+
+/*==================================================
+                DASHBOARD GRID
+==================================================*/
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.dashboard-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.card-header h2{
+
+    color:#111827;
+
+    font-size:22px;
+
+}
+
+.card-header a{
+
+    text-decoration:none;
+
+    color:#2563EB;
+
+    font-weight:600;
+
+}
+
+.card-header button{
+
+    border:none;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+/*==================================================
+                ORDERS TABLE
+==================================================*/
+
+.orders-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.orders-table th{
+
+    text-align:left;
+
+    padding:15px;
+
+    color:#64748B;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+.orders-table td{
+
+    padding:18px 15px;
+
+    border-bottom:1px solid #F1F5F9;
+
+}
+
+.orders-table tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+
+/*==================================================
+                SALES CARD
+==================================================*/
+
+.sales-info{
+
+    margin-bottom:25px;
+
+}
+
+.sales-info h1{
+
+    font-size:40px;
+
+    color:#111827;
+
+}
+
+.sales-info span{
+
+    color:#64748B;
+
+}
+
+.chart-placeholder{
+
+    height:300px;
+
+    border:2px dashed #D1D5DB;
+
+    border-radius:16px;
+
+    background:#F8FAFC;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.chart-placeholder i{
+
+    font-size:65px;
+
+    color:#2563EB;
+
+    margin-bottom:18px;
+
+}
+
+.chart-placeholder h3{
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+.chart-placeholder p{
+
+    color:#64748B;
+
+}
+
+/*==================================================
+                BOTTOM GRID
+==================================================*/
+
+.bottom-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.product-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.product-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.product-item img{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    background:#F1F5F9;
+
+}
+
+.product-info{
+
+    flex:1;
+
+}
+
+.product-info h4{
+
+    color:#111827;
+
+    margin-bottom:5px;
+
+}
+
+.product-info span{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.product-item strong{
+
+    color:#2563EB;
+
+    font-size:18px;
+
+}
+
+/*==================================================
+            CUSTOMERS PLACEHOLDER
+==================================================*/
+
+.customers-placeholder{
+
+    height:320px;
+
+    border:2px dashed #D1D5DB;
+
+    border-radius:16px;
+
+    background:#F8FAFC;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.customers-placeholder i{
+
+    font-size:70px;
+
+    color:#2563EB;
+
+    margin-bottom:20px;
+
+}
+
+.customers-placeholder h3{
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+.customers-placeholder p{
+
+    color:#64748B;
+
+}
+
+/*==================================================
+                    STATUS
+==================================================*/
+
+.status{
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.delivered{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.shipped{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+}
+
+.processing{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.pending{
+
+    background:#F3F4F6;
+
+    color:#6B7280;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .stats-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .bottom-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+    .dashboard-content{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    .admin-dashboard{
+
+        flex-direction:column;
+
+    }
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .header-actions{
+
+        width:100%;
+
+        justify-content:space-between;
+
+    }
+
+    .stats-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .orders-table{
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website Title -->
+    <title>FAYNEX | Electronics Store</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ==================== Navbar ==================== -->
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/FAYNEX-logo.png" alt="FAYNEX Logo">
+            </a>
+        </div>
+
+
+        <!-- Menu Links -->
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/shop.html">Shop</a></li>
+            <li><a href="pages/categories-customers.html">Categories</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+
+        </ul>
+
+
+        <!-- Icons -->
+        <div class="nav-icons">
+
+            <!-- Search -->
+            <div class="search-container">
+
+                <button class="search-toggle" type="button"
+                    aria-label="Open search" aria-expanded="false">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <form class="search-form"
+                    action="pages/shop.html" method="GET" hidden>
+
+                    <input
+                        type="search"
+                        name="search"
+                        placeholder="Search products..."
+                        aria-label="Search products"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit" aria-label="Submit search">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Cart -->
+            <a href="pages/cart.html" class="cart-icon" aria-label="Shopping Cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </a>
+
+
+            <!-- Profile -->
+            <a href="pages/login.html" aria-label="My Account">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation" aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </nav>
+
+    <!-- ==================== Hero Section ==================== -->
+
+    <section class="hero">
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+
+            <h1>
+                Latest Technology For Your Smart Life
+            </h1>
+
+            <p>
+                Discover premium electronics and smart devices
+                designed to make your life easier.
+            </p>
+
+            <a href="pages/shop.html" class="hero-btn">
+                Shop Now
+            </a>
+
+        </div>
+
+        <!-- Hero Image -->
+        <div class="hero-image">
+
+            <img src="images/hero.png" alt="Electronics">
+
+        </div>
+
+    </section>
+
+    
+<!-- ==================== Categories Section ==================== -->
+
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="category-container">
+
+            <a href="pages/shop.html?category=smartphones" class="category-card">
+                <img src="images/phones.jpg" alt="Phones">
+                <h3>Smartphones</h3>
+            </a>
+
+            <a href="pages/shop.html?category=laptops" class="category-card">
+                <img src="images/laptops.jpg" alt="Laptops">
+                <h3>Laptops</h3>
+            </a>
+
+            <a href="pages/shop.html?category=accessories" class="category-card">
+                <img src="images/accessories.jpg" alt="Accessories">
+                <h3>Accessories</h3>
+            </a>
+
+            <a href="pages/shop.html?category=tvs" class="category-card">
+                <img src="images/tv.jpg" alt="TV">
+                <h3>TVs</h3>
+            </a>
+
+            <a href="pages/shop.html?category=smart-watches" class="category-card">
+                <img src="images/smartwatch.jpg" alt="Smart Watch">
+                <h3>Smart Watches</h3>
+            </a>
+
+            <a href="pages/shop.html?category=gaming" class="category-card">
+                <img src="images/gaming.jpg" alt="Gaming">
+                <h3>Gaming</h3>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== Featured Products Section ==================== -->
+
+    <section class="featured-products">
+
+    <h2>Featured Products</h2>
+
+    <!-- Cards are rebuilt by js/products.js from the products store -->
+    <div class="products-container" data-store-products data-limit="8"
+        data-details-path="pages/product-details.html" data-images-path="images/">
+
+    </div>
+
+</section>
+
+<!-- ==================== Special Offers Section ==================== -->
+
+<section class="special-offers">
+
+    <div class="offer-content">
+
+        <h2>
+            Special Offers
+        </h2>
+
+
+        <h3>
+            Up To 50% OFF On Latest Electronics
+        </h3>
+
+
+        <p>
+            Discover amazing deals on smartphones,
+            laptops, gaming devices and smart accessories.
+        </p>
+
+
+        <a href="pages/shop.html" class="offer-btn">
+            Shop Offers
+        </a>
+
+    </div>
+
+
+    <div class="offer-image">
+
+        <img src="images/offer.png" alt="Special Offers">
+
+    </div>
+
+
+</section>
+
+<!-- ==================== Why Choose FAYNEX Section ==================== -->
+
+<section class="why-choose">
+
+    <h2>
+        Why Choose FAYNEX?
+    </h2>
+
+
+    <div class="features-container">
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <h3>
+                Fast Delivery
+            </h3>
+
+            <p>
+                Quick and reliable delivery to your doorstep.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>
+                Secure Payment
+            </h3>
+
+            <p>
+                Safe and protected payment methods.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h3>
+                Quality Products
+            </h3>
+
+            <p>
+                Premium electronics from trusted brands.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <h3>
+                24/7 Support
+            </h3>
+
+            <p>
+                Our team is always ready to help you.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- ==================== Newsletter Section ==================== -->
+
+<section class="newsletter">
+
+
+    <div class="newsletter-content">
+
+
+        <h2>
+            Subscribe To Our Newsletter
+        </h2>
+
+
+        <p>
+            Get the latest updates, new products and special offers.
+        </p>
+
+        
+        <div class="newsletter-form">
+
+            <input
+                type="email"
+                id="newsletter-email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+                required>
+
+            <button type="button" id="newsletter-subscribe">
+                Subscribe
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- ==================== Footer Section ==================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- Logo & About -->
+
+        <div class="footer-box">
+
+            <h2>
+                FAYNEX
+            </h2>
+
+            <p>
+                Your trusted store for the latest
+                electronics and smart devices.
+            </p>
+
+        </div>
+
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/shop.html">Shop</a></li>
+                <li><a href="pages/categories-customers.html">Categories</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+
+
+        <!-- Contact -->
+
+        <div class="footer-box">
+
+            <h3>
+                Contact Us
+            </h3>
+
+
+            <p>
+                Email: info@faynex.com
+            </p>
+
+
+            <p>
+                Phone: +962 7XX XXX XXX
+            </p>
+
+
+            <p>
+                Amman, Jordan
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 FAYNEX. All Rights Reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAYNEX | Customers</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/customers.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <a href="dashboard.html">
+
+                <img src="../images/FAYNEX-logo.png" alt="FAYNEX Logo">
+
+            </a>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="add-product.html">
+                    <i class="fa-solid fa-square-plus"></i>
+                    Add Product
+                </a>
+            </li>
+
+            <li>
+                <a href="orders.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Orders
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="customers.html">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <a href="../pages/login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+        <!-- ================= Main Content ================= -->
+
+    <main class="dashboard-content">
+
+    <!-- ================= Header ================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h1>Customers</h1>
+
+            <p>Manage your customers</p>
+
+        </div>
+
+        <div class="header-tools">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" id="customers-search" placeholder="Search customers..." aria-label="Search customers">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= Customer Statistics ================= -->
+
+    <section class="categories-grid">
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Total Customers</h3>
+
+            <span id="total-customers">0 Customers</span>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <h3>Active Customers</h3>
+
+            <span id="active-customers">0 Active</span>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <h3>New This Month</h3>
+
+            <span id="new-customers">0 Customers</span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Customers Table ================= -->
+
+    <section class="products-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Customer</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Orders</th>
+                    <th>Status</th>
+                    <th>Joined</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="customers-body">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ================= Pagination ================= -->
+
+    <div class="pagination" id="customers-pagination"></div>
+
+
+    <!-- ================= Newsletter Subscribers ================= -->
+
+    <h2 class="admin-section-title">
+        Newsletter Subscribers
+        <span id="subscribers-count">0</span>
+    </h2>
+
+    <section class="products-table subscribers-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>#</th>
+                    <th>Email</th>
+                    <th>Subscribed On</th>
+                    <th>Account</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="subscribers-body">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<!-- JavaScript -->
+
+<script src="../js/main.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/admin-customers.js"></script>
+
+</body>
+
+</html>

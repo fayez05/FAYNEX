@@ -1,0 +1,553 @@
+/* ==================== Cart Section ==================== */
+
+.cart-section{
+
+    padding: 80px 8%;
+
+}
+
+
+.cart-section h1{
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    color: #111827;
+
+}
+
+
+.cart-container{
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 40px;
+
+}
+
+
+/* ---------- Cart Table ---------- */
+
+.cart-items{
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.cart-items table{
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+.cart-items th,
+.cart-items td{
+
+    padding: 20px 10px;
+
+    border-bottom: 1px solid #E5E7EB;
+
+    text-align: center;
+
+}
+
+
+.cart-product{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.cart-product img{
+
+    width: 80px;
+
+    height: 80px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+
+.cart-product-info{
+
+    text-align: left;
+
+}
+
+
+.cart-product-info h3{
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+
+    color: #111827;
+
+}
+
+
+.cart-product-info p{
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    margin: 2px 0;
+
+}
+
+
+.cart-items input{
+
+    width: 70px;
+
+    padding: 8px;
+
+    text-align: center;
+
+}
+
+
+.remove-btn{
+
+    background: #EF4444;
+
+    color: white;
+
+    border: none;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+/* ---------- Summary ---------- */
+
+.cart-summary{
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+
+    height: fit-content;
+
+}
+
+
+.cart-summary h2{
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ---------- Coupon ---------- */
+
+.coupon-box{
+
+    margin-bottom: 30px;
+
+}
+
+
+.coupon-box label{
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+
+    color: #111827;
+
+}
+
+
+.coupon-box input{
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.coupon-box button{
+
+    width: 100%;
+
+    padding: 13px;
+
+    background: #111827;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.coupon-box button:hover{
+
+    background: #374151;
+
+}
+
+
+.summary-item{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 15px 0;
+
+}
+
+
+.total{
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+
+.checkout-btn,
+.continue-btn{
+
+    display: block;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.checkout-btn{
+
+    background: #2563EB;
+
+    color: white;
+
+}
+
+
+.continue-btn{
+
+    background: #F1F5F9;
+
+    color: #111827;
+
+}
+
+
+/* CLEAR Coupon  */
+
+.coupon-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.coupon-buttons button {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+#apply-coupon {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+#apply-coupon:hover {
+    background-color: #1D4ED8;
+}
+
+#clear-coupon {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+#clear-coupon:hover {
+    background-color: #B91C1C;
+}
+
+/* Coupon Buttons */
+
+.coupon-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.coupon-buttons button {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+#apply-coupon {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+#apply-coupon:hover {
+    background-color: #1D4ED8;
+}
+
+#clear-cart {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+#clear-cart:hover {
+    background-color: #B91C1C;
+}
+
+
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .cart-container{
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cart-items{
+
+        overflow-x: auto;
+
+    }
+
+}
+
+/* ==================== Checkout Progress ==================== */
+
+.checkout-progress{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 40px 0 60px;
+
+}
+
+
+.step{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    color: #94A3B8;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.step i{
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #E2E8F0;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.step.active{
+
+    color: #2563EB;
+
+}
+
+
+.step.active i{
+
+    background: #2563EB;
+
+    color: white;
+
+}
+
+
+.line{
+
+    width: 120px;
+
+    height: 3px;
+
+    background: #E2E8F0;
+
+    margin: 0 20px;
+
+}
+
+
+@media(max-width:768px){
+
+    .line{
+
+        width: 50px;
+
+    }
+
+    .step span{
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* ==============================
+   EMPTY CART
+============================== */
+
+.empty-cart {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.empty-cart-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.empty-cart-content > i {
+    font-size: 55px;
+    color: #94A3B8;
+}
+
+.empty-cart-content h3 {
+    margin: 0;
+    color: #111827;
+    font-size: 22px;
+}
+
+.empty-cart-content p {
+    margin: 0;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+.empty-cart-content .continue-btn {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Disabled Checkout Button */
+
+.checkout-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ==============================
+   PRICES IN JOD
+   Keep "JOD 1,099.00" on one line
+============================== */
+
+.cart-items td:nth-child(2),
+.cart-items td:nth-child(4),
+.summary-item > span:last-child {
+    white-space: nowrap;
+}
+
+.summary-item {
+    gap: 12px;
+}

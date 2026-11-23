@@ -1,0 +1,237 @@
+
+/* ==================== Categories Banner ==================== */
+
+.categories-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 340px;
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #041e54, #2563EB);
+    color: white;
+    overflow: hidden;
+}
+
+.categories-banner-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.categories-banner-content h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.categories-banner-content p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.categories-banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-banner-image img {
+    width: 100%;
+    max-width: 450px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* ==================== Categories Section ==================== */
+
+.categories-section {
+    padding: 50px 5%;
+    background: #F1F5F9;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==================== Category Card ==================== */
+
+.customer-category-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.customer-category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.10);
+}
+
+.customer-category-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #fff;
+}
+
+.customer-category-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.customer-category-card:hover .customer-category-image img {
+    transform: scale(1.04);
+}
+
+/* ==================== Category Information ==================== */
+
+.customer-category-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 20px 22px 25px;
+    text-align: center;
+}
+
+.customer-category-info h2 {
+    margin-bottom: 10px;
+    color: #111827;
+    font-size: 22px;
+}
+
+.customer-category-info p {
+    margin-bottom: 22px;
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 240px;
+    margin-top: auto;
+    padding: 13px 18px;
+    border-radius: 30px;
+    background: #2563EB;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.explore-btn:hover {
+    background: #1D4ED8;
+}
+
+/* ==================== Responsive ==================== */
+
+@media (max-width: 992px) {
+    .categories-banner {
+        padding: 50px 5%;
+        gap: 25px;
+    }
+
+    .categories-banner-content h1 {
+        font-size: 38px;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 5%;
+    }
+
+    .categories-banner-content h1 {
+        font-size: 34px;
+    }
+
+    .categories-banner-content p {
+        font-size: 16px;
+    }
+
+    .categories-banner-image img {
+        height: 200px;
+    }
+
+    .categories-section {
+        padding: 35px 5%;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .customer-category-image {
+        padding: 12px;
+    }
+
+    .customer-category-image img {
+        height: 150px;
+    }
+
+    .customer-category-info {
+        padding: 16px 12px 20px;
+    }
+
+    .customer-category-info h2 {
+        font-size: 18px;
+    }
+
+    .customer-category-info p {
+        font-size: 14px;
+    }
+
+    .explore-btn {
+        gap: 7px;
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-banner-content h1 {
+        font-size: 29px;
+    }
+
+    .categories-container {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-category-image img {
+        height: 210px;
+    }
+
+    .customer-category-info h2 {
+        font-size: 21px;
+    }
+
+    .explore-btn {
+        max-width: 260px;
+        font-size: 14px;
+    }
+}

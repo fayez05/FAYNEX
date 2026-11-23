@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAYNEX | Checkout</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- ==================== Navbar ==================== -->
+
+<nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/FAYNEX-logo.png" alt="FAYNEX Logo">
+            </a>
+        </div>
+
+
+        <!-- Menu Links -->
+        <ul class="nav-links">
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="categories-customers.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+
+        <!-- Icons -->
+        <div class="nav-icons">
+
+            <!-- Search -->
+            <div class="search-container">
+
+                <button class="search-toggle" type="button"
+                    aria-label="Open search" aria-expanded="false">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <form class="search-form"
+                    action="shop.html" method="GET" hidden>
+
+                    <input
+                        type="search"
+                        name="search"
+                        placeholder="Search products..."
+                        aria-label="Search products"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit" aria-label="Submit search">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Cart -->
+            <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </a>
+
+
+            <!-- Profile -->
+            <a href="login.html" aria-label="My Account">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation" aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </nav>
+
+
+
+
+
+<!-- ==================== Checkout Section ==================== -->
+
+<section class="checkout-section">
+
+    <h1>Checkout</h1>
+
+    <!-- ==================== Checkout Progress ==================== -->
+
+    <div class="checkout-progress">
+
+        <a href="cart.html" class="step">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+        </a>
+
+        <div class="line"></div>
+
+        <div class="step active">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Checkout</span>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="step">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Complete</span>
+        </div>
+
+    </div>
+
+
+    <form id="checkout-form">
+        <div class="checkout-container">
+
+
+            <!-- ==================== Left Side ==================== -->
+
+            <div class="checkout-left">
+
+                <!-- ==================== Billing Information ==================== -->
+
+                <div class="billing-card">
+
+                    <h2>Billing Information</h2>
+
+                    <div class="form-grid">
+
+                        <input type="text" placeholder="First Name" required>
+
+                        <input type="text" placeholder="Last Name" required>
+
+                        <input type="email" placeholder="Email Address" required>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Phone Number (e.g. 0791234567)"
+                            pattern="(07[789])[0-9]{7}|\+9627[789][0-9]{7}"
+                            minlength="10"
+                            maxlength="13"
+                            title="Enter a valid Jordanian phone number, e.g. 079******* or +96279*******"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==================== Shipping Address ==================== -->
+
+                <div class="billing-card">
+
+                    <h2>Shipping Address</h2>
+
+                    <div class="form-grid">
+
+                        <select id="country" name="country" required>
+                            <option value="Jordan" selected>Jordan</option>
+                        </select>
+
+
+
+                        <select required>
+
+                            <option value="" selected disabled>Select Governorate</option>
+
+                            <option>Amman</option>
+
+                            <option>Irbid</option>
+
+                            <option>Zarqa</option>
+
+                            <option>Aqaba</option>
+
+                            <option>Madaba</option>
+
+                            <option>Karak</option>
+
+                            <option>Mafraq</option>
+
+                            <option>Jerash</option>
+
+                            <option>Ajloun</option>
+
+                            <option>Tafilah</option>
+
+                            <option>Ma'an</option>
+
+                            <option>Balqa</option>
+
+                        </select>
+
+
+
+                        <input class="full-width" type="text"
+                            placeholder="Street Address" required>
+
+
+
+                        <input class="full-width" type="text"
+                            placeholder="Apartment, Suite, Building (Optional)">
+
+
+
+                        <input class="full-width" type="text"
+                            placeholder="ZIP Code">
+
+                    </div>
+
+                </div>
+
+
+
+                
+                
+                <!-- ==================== Payment Method ==================== -->
+
+                <div class="billing-card">
+
+                    <h2>Payment Method</h2>
+
+                    <div class="payment-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="card"
+                                checked
+                            >
+                            Credit / Debit Card
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="cod"
+                            >
+                            Cash on Delivery
+                        </label>
+
+                    </div>
+
+
+                    <!-- Card Details -->
+
+                    <div id="card-details">
+
+                        <div class="form-grid">
+
+                            <input
+                                type="text"
+                                id="cardholder-name"
+                                placeholder="Cardholder Name"
+                                autocomplete="cc-name"
+                                required
+                            >
+
+                            <input
+                                type="text"
+                                id="card-number"
+                                placeholder="Card Number"
+                                inputmode="numeric"
+                                autocomplete="cc-number"
+                                maxlength="19"
+                                required
+                            >
+
+                            <input
+                                type="text"
+                                id="card-expiry"
+                                placeholder="Expiry Date (MM/YY)"
+                                inputmode="numeric"
+                                autocomplete="cc-exp"
+                                maxlength="5"
+                                required
+                            >
+
+                            <input
+                                type="password"
+                                id="card-cvv"
+                                placeholder="CVV"
+                                inputmode="numeric"
+                                autocomplete="cc-csc"
+                                maxlength="4"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <!-- ==================== Right Side ==================== -->
+
+
+            <div class="checkout-summary">
+
+                <h2>Order Summary</h2>
+
+                <!-- Products -->
+                <div id="checkout-items">
+
+                    <!-- Products will be added by JavaScript -->
+
+                </div>
+
+                <hr>
+
+                <!-- Subtotal -->
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span id="checkout-subtotal">JOD 0.00</span>
+                </div>
+
+                <!-- Discount -->
+                <div class="summary-item" id="checkout-discount-row" hidden>
+                    <span>Discount</span>
+                    <span id="checkout-discount">-JOD 0.00</span>
+                </div>
+
+                <!-- Shipping -->
+                <div class="summary-item">
+                    <span>Shipping</span>
+                    <span id="checkout-shipping">Free</span>
+                </div>
+
+                <!-- Tax -->
+                <div class="summary-item">
+                    <span>Tax (16%)</span>
+                    <span id="checkout-tax">JOD 0.00</span>
+                </div>
+
+                <hr>
+
+                <!-- Total -->
+                <div class="summary-item total">
+                    <span>Total</span>
+                    <span id="checkout-total">JOD 0.00</span>
+                </div>
+
+                <button type="submit" class="place-order">
+                    Place Order
+                </button>
+
+            </div>
+
+
+        </div>
+    </form>
+
+</section>
+
+
+<!-- ==================== Footer Section ==================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- Logo & About -->
+
+        <div class="footer-box">
+
+            <h2>
+                FAYNEX
+            </h2>
+
+            <p>
+                Your trusted store for the latest
+                electronics and smart devices.
+            </p>
+
+        </div>
+
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="categories-customers.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+
+
+        <!-- Contact -->
+
+        <div class="footer-box">
+
+            <h3>
+                Contact Us
+            </h3>
+
+
+            <p>
+                Email: info@faynex.com
+            </p>
+
+
+            <p>
+                Phone: +962 7XX XXX XXX
+            </p>
+
+
+            <p>
+                Amman, Jordan
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 FAYNEX. All Rights Reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/checkout.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAYNEX | Reports</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/reports.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <a href="dashboard.html">
+
+                <img src="../images/FAYNEX-logo.png" alt="FAYNEX Logo">
+
+            </a>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="add-product.html">
+                    <i class="fa-solid fa-square-plus"></i>
+                    Add Product
+                </a>
+            </li>
+
+            <li>
+                <a href="orders.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Orders
+                </a>
+            </li>
+
+            <li>
+                <a href="customers.html">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <a href="../pages/login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+        <!-- ================= Main Content ================= -->
+
+    <main class="dashboard-content">
+
+    <!-- ================= Header ================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h1>Reports</h1>
+
+            <p>Monitor your store performance</p>
+
+        </div>
+
+        <div class="header-tools">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" id="reports-search" placeholder="Search products..." aria-label="Search top products">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= Reports Statistics ================= -->
+
+    <section class="categories-grid">
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-dollar-sign"></i>
+
+            <h3>Total Revenue</h3>
+
+            <span id="report-revenue">JOD 0</span>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h3>Total Orders</h3>
+
+            <span id="report-orders">0 Orders</span>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Total Customers</h3>
+
+            <span id="report-customers">0 Customers</span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Sales Chart ================= -->
+
+    <section class="chart-card">
+
+        <div class="chart-header">
+
+            <h2>Sales Overview</h2>
+
+            <p>Monthly sales for the last 6 months</p>
+
+        </div>
+
+        <div class="chart-placeholder" id="report-sales-chart">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>Sales Chart</h3>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Top Selling Products ================= -->
+
+    <section class="top-products-report">
+
+        <div class="section-title">
+
+            <h2>Top Selling Products</h2>
+
+            <p>Best-selling products by units sold</p>
+
+        </div>
+
+        <div class="report-products-grid" id="report-top-products">
+
+        </div>
+
+    </section>
+
+
+</main>
+
+<!-- JavaScript -->
+
+<script src="../js/main.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/admin-reports.js"></script>
+
+</body>
+
+</html>

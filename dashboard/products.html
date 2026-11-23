@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAYNEX | Products</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/products.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <a href="dashboard.html">
+
+                <img src="../images/FAYNEX-logo.png" alt="FAYNEX Logo">
+
+            </a>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="products.html">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="add-product.html">
+                    <i class="fa-solid fa-square-plus"></i>
+                    Add Product
+                </a>
+            </li>
+
+            <li>
+                <a href="orders.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Orders
+                </a>
+            </li>
+
+            <li>
+                <a href="customers.html">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <a href="../pages/login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+        <!-- ================= Main Content ================= -->
+
+    <main class="dashboard-content">
+
+    <!-- ================= Header ================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h1>Products</h1>
+
+            <p>Manage your store products</p>
+
+        </div>
+
+        <div class="header-tools">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" id="products-search" placeholder="Search products..." aria-label="Search products">
+
+            </div>
+
+            <a href="add-product.html" class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Product
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= All Products ================= -->
+
+    <div class="all-products-card active" data-filter="all">
+
+        <i class="fa-solid fa-store"></i>
+
+        <h3>All Products</h3>
+
+        <span id="count-all">0 Products</span>
+
+    </div>
+
+    <!-- ================= Categories ================= -->
+
+    <section class="categories-grid">
+
+        <div class="category-card" data-filter="smartphones">
+
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            <h3>Phones</h3>
+
+            <span id="count-smartphones">0 Products</span>
+
+        </div>
+
+        <div class="category-card" data-filter="laptops">
+
+            <i class="fa-solid fa-laptop"></i>
+
+            <h3>Laptops</h3>
+
+            <span id="count-laptops">0 Products</span>
+
+        </div>
+
+        <div class="category-card" data-filter="tvs">
+
+            <i class="fa-solid fa-tv"></i>
+
+            <h3>TVs</h3>
+
+            <span id="count-tvs">0 Products</span>
+
+        </div>
+
+        <div class="category-card" data-filter="smart-watches">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Smart Watches</h3>
+
+            <span id="count-smart-watches">0 Products</span>
+
+        </div>
+
+        <div class="category-card" data-filter="accessories">
+
+            <i class="fa-solid fa-headphones"></i>
+
+            <h3>Accessories</h3>
+
+            <span id="count-accessories">0 Products</span>
+
+        </div>
+
+        <div class="category-card" data-filter="gaming">
+
+            <i class="fa-solid fa-gamepad"></i>
+
+            <h3>Gaming</h3>
+
+            <span id="count-gaming">0 Products</span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Products Table ================= -->
+
+    <section class="products-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="products-body">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ================= Pagination ================= -->
+
+    <div class="pagination" id="products-pagination"></div>
+
+</main>
+
+<!-- JavaScript -->
+
+<script src="../js/main.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/admin-products.js"></script>
+
+</body>
+
+</html>

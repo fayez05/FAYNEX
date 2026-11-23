@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAYNEX | Product Details</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/product-details.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ==================== Navbar ==================== -->
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/FAYNEX-logo.png" alt="FAYNEX Logo">
+            </a>
+        </div>
+
+
+        <!-- Menu Links -->
+        <ul class="nav-links">
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="categories-customers.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+
+        <!-- Icons -->
+        <div class="nav-icons">
+
+            <!-- Search -->
+            <div class="search-container">
+
+                <button class="search-toggle" type="button"
+                    aria-label="Open search" aria-expanded="false">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <form class="search-form"
+                    action="shop.html" method="GET" hidden>
+
+                    <input
+                        type="search"
+                        name="search"
+                        placeholder="Search products..."
+                        aria-label="Search products"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit" aria-label="Submit search">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Cart -->
+            <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </a>
+
+
+            <!-- Profile -->
+            <a href="login.html" aria-label="My Account">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation" aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+    </nav>
+
+<!-- ==================== Breadcrumb Section ==================== -->
+
+<section class="breadcrumb">
+
+    <a href="../index.html">Home</a>
+
+    <span>/</span>
+
+    <a href="shop.html">Shop</a>
+
+    <span>/</span>
+
+    <!-- Filled by product-details.js -->
+    <span id="breadcrumb-product"></span>
+
+</section>    
+
+<!-- ==================== Product Details Section ==================== -->
+
+<section class="product-details">
+
+    <!-- Left Side -->
+    <div class="product-left">
+
+        <div class="main-image">
+
+            <!-- Image, name, price and details are filled by product-details.js -->
+            <img alt="">
+
+        </div>
+
+    </div>
+
+
+    <!-- Right Side -->
+    <div class="product-right">
+
+        <h1></h1>
+
+        <div class="product-rating"></div>
+
+        <p class="price"></p>
+
+        <p class="description"></p>
+
+        <div class="product-features"></div>
+
+        <!-- Product Options -->
+
+        <div class="product-options">
+
+
+            <!-- Colors -->
+
+            <div class="option" id="color-option">
+
+                <h3>Color</h3>
+
+                <!-- Color images are added by product-details.js -->
+                <div class="color-images"></div>
+
+            </div>
+
+
+            <!-- Storage -->
+
+            <div class="option" id="storage-option">
+
+                <h3>Storage</h3>
+
+                
+            <!-- Storage buttons are added by product-details.js -->
+            <div class="storage-buttons"></div>
+
+
+            </div>
+
+
+            <!-- Quantity -->
+
+            
+            <div class="quantity-box">
+
+                <button type="button" class="decrease-quantity"
+                    aria-label="Decrease quantity">-</button>
+
+                <input type="number" class="quantity-input"
+                    value="1" min="1" step="1" aria-label="Quantity">
+
+                <button type="button" class="increase-quantity"
+                    aria-label="Increase quantity">+</button>
+
+            </div>
+
+
+
+            <!-- Product Actions -->
+
+            <div class="product-actions">
+
+                <button class="add-cart-btn">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add To Cart
+
+                </button>
+
+
+                <button type="button" class="buy-btn">
+
+                    Buy Now
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================== Product Reviews ==================== -->
+
+<section class="product-reviews" id="product-reviews">
+
+    <h2>Customer Reviews</h2>
+
+
+    <!-- Rating Summary -->
+    <div class="reviews-summary">
+
+        <span class="reviews-average" id="reviews-average">0.0</span>
+
+        <div>
+
+            <div class="stars" id="reviews-stars">☆☆☆☆☆</div>
+
+            <p id="reviews-count">No reviews yet</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Review Form (logged in customers) -->
+    <form class="review-form" id="review-form" hidden>
+
+        <h3 id="review-form-title">Write a Review</h3>
+
+        <div class="star-input" id="star-input" role="radiogroup" aria-label="Your rating">
+
+            <button type="button" data-value="1" role="radio" aria-checked="false" aria-label="1 star">★</button>
+            <button type="button" data-value="2" role="radio" aria-checked="false" aria-label="2 stars">★</button>
+            <button type="button" data-value="3" role="radio" aria-checked="false" aria-label="3 stars">★</button>
+            <button type="button" data-value="4" role="radio" aria-checked="false" aria-label="4 stars">★</button>
+            <button type="button" data-value="5" role="radio" aria-checked="false" aria-label="5 stars">★</button>
+
+        </div>
+
+        <label for="review-comment">Your Review</label>
+
+        <textarea id="review-comment" name="comment" rows="4"
+            placeholder="What did you like or dislike about this product?"
+            minlength="5" maxlength="500" required></textarea>
+
+        <div class="review-form-actions">
+
+            <button type="button" class="review-delete-btn" id="review-delete-btn" hidden>
+                Delete My Review
+            </button>
+
+            <button type="submit" class="review-submit-btn" id="review-submit-btn">
+                Submit Review
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <!-- Guests -->
+    <p class="review-login-note" id="review-login-note" hidden>
+        Please <a href="login.html">log in</a> to write a review.
+    </p>
+
+
+    <!-- Reviews List -->
+    <div class="reviews-list" id="reviews-list"></div>
+
+</section>
+
+
+<!-- ==================== Related Products ==================== -->
+
+<section class="related-products">
+
+    <h2>Related Products</h2>
+
+
+    <!-- Related cards are added by product-details.js -->
+    <div class="related-container" id="related-container"></div>
+
+
+</section>
+
+    <!-- ==================== Footer Section ==================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- Logo & About -->
+
+        <div class="footer-box">
+
+            <h2>
+                FAYNEX
+            </h2>
+
+            <p>
+                Your trusted store for the latest
+                electronics and smart devices.
+            </p>
+
+        </div>
+
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="categories-customers.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <!-- Contact -->
+
+        <div class="footer-box">
+
+            <h3>
+                Contact Us
+            </h3>
+
+
+            <p>
+                Email: info@faynex.com
+            </p>
+
+
+            <p>
+                Phone: +962 7XX XXX XXX
+            </p>
+
+
+            <p>
+                Amman, Jordan
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 FAYNEX. All Rights Reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/product-details.js"></script>
+
+</body>
+
+</html>

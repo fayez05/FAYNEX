@@ -1,0 +1,693 @@
+/*==================================================
+                ADMIN DASHBOARD
+==================================================*/
+
+.admin-dashboard{
+    display:flex;
+    min-height:100vh;
+    background:#F4F7FC;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*================ Sidebar ================*/
+
+.sidebar{
+    width:270px;
+    background:#111827;
+    color:#fff;
+    position:fixed;
+    left:0;
+    top:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:25px 18px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.logo img{
+    width:170px;
+}
+
+.sidebar-menu{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sidebar-menu li{
+    margin-bottom:8px;
+}
+
+.sidebar-menu a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#CBD5E1;
+    padding:15px 18px;
+    border-radius:14px;
+    transition:.3s;
+    font-size:16px;
+    font-weight:500;
+}
+
+.sidebar-menu a:hover{
+    background:#2563EB;
+    color:#fff;
+}
+
+.sidebar-menu .active a{
+    background:#2563EB;
+    color:#fff;
+}
+
+.sidebar-menu i{
+    width:22px;
+    font-size:18px;
+}
+
+.logout {
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.logout a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #F87171;
+    padding: 15px 18px;
+    border-radius: 14px;
+    transition: .3s;
+}
+
+.logout a:hover {
+    background: #1F2937;
+}
+
+/*================ Main =================*/
+
+.dashboard-content{
+    margin-left:270px;
+    flex:1;
+    padding:35px;
+}
+
+/*================ Header =================*/
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.dashboard-header h1{
+    font-size:34px;
+    color:#111827;
+    margin-bottom:6px;
+}
+
+.dashboard-header p{
+    color:#64748B;
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.notification-btn{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:15px;
+    background:#fff;
+    cursor:pointer;
+    position:relative;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.notification-btn i{
+    font-size:20px;
+}
+
+.notification-btn span{
+    position:absolute;
+    top:8px;
+    right:8px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#EF4444;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
+}
+
+.admin-profile{
+    background:#fff;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 18px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.admin-profile img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.admin-profile h4{
+    color:#111827;
+    margin-bottom:3px;
+}
+
+.admin-profile small{
+    color:#64748B;
+}
+
+/*==================================================
+                ADMIN JAVASCRIPT STYLES
+    Styles for elements created by js/admin.js
+==================================================*/
+
+/*================ Mobile Sidebar =================*/
+
+.sidebar-toggle{
+    display:none;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    color:#111827;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    flex-shrink:0;
+}
+
+.sidebar-overlay{
+    display:none;
+}
+
+@media (max-width:992px){
+
+    .admin-dashboard{
+        flex-direction:row;
+    }
+
+    .admin-dashboard .sidebar{
+        position:fixed;
+        width:270px;
+        height:100vh;
+        z-index:2000;
+        overflow-y:auto;
+        transform:translateX(-100%);
+        transition:transform .3s ease;
+    }
+
+    .admin-dashboard .sidebar.open{
+        transform:translateX(0);
+    }
+
+    .sidebar-overlay.show{
+        display:block;
+        position:fixed;
+        inset:0;
+        z-index:1500;
+        background:rgba(15,23,42,.45);
+    }
+
+    .admin-dashboard .dashboard-content{
+        margin-left:0;
+        padding:20px;
+        min-width:0;
+    }
+
+    .sidebar-toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .dashboard-header{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .dashboard-header .header-title{
+        display:flex;
+        align-items:center;
+        gap:15px;
+    }
+
+}
+
+/*================ Notifications =================*/
+
+.faynex-notification{
+    position:fixed;
+    top:25px;
+    right:25px;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    width:340px;
+    max-width:calc(100% - 32px);
+    padding:18px;
+    background:#fff;
+    border:1px solid #E5E7EB;
+    border-left:4px solid #2563EB;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.faynex-notification.error{
+    border-left-color:#DC2626;
+}
+
+.notification-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    flex-shrink:0;
+    background:#DBEAFE;
+    color:#2563EB;
+    border-radius:50%;
+    font-size:18px;
+}
+
+.faynex-notification.error .notification-icon{
+    background:#FEE2E2;
+    color:#DC2626;
+}
+
+.notification-content{
+    flex:1;
+    min-width:0;
+}
+
+.notification-content h4{
+    margin:0 0 5px;
+    color:#111827;
+    font-size:15px;
+}
+
+.notification-content p{
+    margin:0;
+    color:#6B7280;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.notification-close{
+    align-self:flex-start;
+    border:none;
+    background:transparent;
+    color:#9CA3AF;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/*================ Status Colors =================*/
+
+.processing-status{
+    background:#FFEDD5;
+    color:#EA580C;
+}
+
+.status.cancelled{
+    background:#FEE2E2;
+    color:#DC2626;
+}
+
+.empty-row{
+    text-align:center;
+    color:#64748B;
+    padding:30px !important;
+}
+
+/*================ Clickable Cards =================*/
+
+.category-card[data-filter],
+.all-products-card[data-filter]{
+    cursor:pointer;
+}
+
+/*================ Customer Avatar =================*/
+
+.admin-avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#DBEAFE;
+    color:#2563EB;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    flex-shrink:0;
+}
+
+.products-table td img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/*================ Admin Modal =================*/
+
+.admin-modal{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(15,23,42,.55);
+}
+
+.admin-modal[hidden]{
+    display:none;
+}
+
+.admin-modal-content{
+    width:100%;
+    max-width:620px;
+    max-height:90vh;
+    overflow-y:auto;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.admin-modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 25px;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.admin-modal-header h2{
+    font-size:22px;
+    color:#111827;
+}
+
+.admin-modal-close{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#F1F5F9;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.admin-modal-body{
+    padding:25px;
+}
+
+.admin-modal-footer{
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+    padding:18px 25px;
+    border-top:1px solid #E5E7EB;
+}
+
+.admin-modal-footer button{
+    padding:12px 22px;
+    border-radius:10px;
+    font-size:15px;
+    cursor:pointer;
+    border:1px solid #CBD5E1;
+    background:#fff;
+}
+
+.admin-modal-footer .modal-save-btn{
+    background:#2563EB;
+    border-color:#2563EB;
+    color:#fff;
+}
+
+.details-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.details-grid span{
+    display:block;
+    color:#64748B;
+    font-size:13px;
+    margin-bottom:4px;
+}
+
+.details-grid strong{
+    color:#111827;
+    overflow-wrap:anywhere;
+}
+
+.details-title{
+    margin:20px 0 12px;
+    font-size:17px;
+    color:#111827;
+}
+
+.details-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.details-list li{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:10px 0;
+    border-bottom:1px solid #F1F5F9;
+    color:#334155;
+}
+
+.details-list li.total-line{
+    font-weight:bold;
+    color:#111827;
+    border-bottom:none;
+}
+
+.modal-select{
+    width:100%;
+    padding:13px;
+    border:1px solid #CBD5E1;
+    border-radius:10px;
+    font-size:15px;
+}
+
+/*================ Simple Bar Chart =================*/
+
+.bar-chart{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:12px;
+    height:220px;
+    padding:20px 10px 0;
+}
+
+.bar-item{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    height:100%;
+    gap:8px;
+    min-width:0;
+}
+
+.bar-value{
+    font-size:12px;
+    color:#64748B;
+    white-space:nowrap;
+}
+
+.bar{
+    width:100%;
+    max-width:48px;
+    min-height:4px;
+    border-radius:8px 8px 0 0;
+    background:linear-gradient(180deg,#2563EB,#041e54);
+}
+
+.bar-label{
+    font-size:13px;
+    color:#334155;
+}
+
+@media (max-width:576px){
+
+    .details-grid{
+        grid-template-columns:1fr;
+    }
+
+    .bar-value{
+        font-size:10px;
+    }
+
+}
+
+/*================ Small Extras =================*/
+
+.card-note{
+    color:#64748B;
+    font-size:14px;
+}
+
+.details-separator{
+    border:none;
+    border-top:1px solid #E5E7EB;
+    margin:20px 0;
+}
+
+.admin-modal-body p{
+    color:#334155;
+    line-height:1.6;
+}
+
+/* Modal and notifications sit outside .admin-dashboard, so they need the font too */
+.admin-modal,
+.faynex-notification{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Hide pagination when there is only one page */
+.pagination[hidden]{
+    display:none;
+}
+
+/* Image preview on Add Product */
+.image-preview{
+    display:block;
+    width:140px;
+    height:140px;
+    margin-top:12px;
+    object-fit:cover;
+    border-radius:12px;
+    border:1px solid #E5E7EB;
+}
+
+.image-preview[hidden]{
+    display:none;
+}
+
+/* Red button for delete confirmations */
+.admin-modal-footer .modal-delete-btn{
+    background:#DC2626;
+    border-color:#DC2626;
+    color:#fff;
+}
+
+/* View button used as a link (Categories page) */
+a.view-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Dashboard home: tables scroll inside their card on small screens */
+@media (max-width:992px){
+
+    .dashboard-grid > *,
+    .bottom-grid > *{
+        min-width:0;
+    }
+
+    .dashboard-card{
+        overflow-x:auto;
+    }
+
+}
+
+/* Header search takes the full width on small screens */
+@media (max-width:992px){
+
+    .dashboard-header .header-tools{
+        width:100%;
+        min-width:0;
+    }
+
+    .dashboard-header .search-box{
+        width:100%;
+        min-width:0;
+    }
+
+    .dashboard-header .search-box input{
+        min-width:0;
+        width:100%;
+    }
+
+}
+
+/* Padding inside the width, so full-width elements fit the screen */
+@media (max-width:992px){
+
+    .dashboard-header .search-box,
+    .dashboard-header .add-btn{
+        box-sizing:border-box;
+    }
+
+}
+
+/* Remove the browser's default space around the page */
+body{
+    margin:0;
+}
+
+/* Section titles added by JavaScript pages (e.g. Newsletter Subscribers) */
+.admin-section-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:40px 0 20px;
+    font-size:24px;
+    color:#111827;
+}
+
+.admin-section-title span{
+    background:#DBEAFE;
+    color:#2563EB;
+    font-size:14px;
+    padding:4px 12px;
+    border-radius:20px;
+}
+
+@media (max-width:768px){
+
+    .subscribers-table table{
+        min-width:500px !important;
+    }
+
+}

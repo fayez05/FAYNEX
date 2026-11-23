@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAYNEX | Settings</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/settings.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <a href="dashboard.html">
+
+                <img src="../images/FAYNEX-logo.png" alt="FAYNEX Logo">
+
+            </a>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    <i class="fa-solid fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="categories.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="add-product.html">
+                    <i class="fa-solid fa-square-plus"></i>
+                    Add Product
+                </a>
+            </li>
+
+            <li>
+                <a href="orders.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Orders
+                </a>
+            </li>
+
+            <li>
+                <a href="customers.html">
+                    <i class="fa-solid fa-users"></i>
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <a href="../pages/login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+        <!-- ================= Main Content ================= -->
+
+    <main class="dashboard-content">
+
+    <!-- ================= Header ================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h1>Settings</h1>
+
+            <p>Manage your store settings</p>
+
+        </div>
+
+    </header>
+
+    <!-- ================= Settings Form ================= -->
+
+    <section class="settings-card">
+
+        <h2>Store Information</h2>
+
+        <form class="settings-form" id="settings-form" novalidate>
+
+            <div class="input-group">
+
+                <label for="settings-name">Store Name</label>
+
+                <input id="settings-name" name="storeName" type="text" placeholder="FAYNEX" required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="settings-email">Store Email</label>
+
+                <input id="settings-email" name="storeEmail" type="email" placeholder="info@faynex.com" required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="settings-phone">Phone Number</label>
+
+                <input id="settings-phone" name="storePhone" type="tel" placeholder="+962 7X XXX XXXX" required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="settings-address">Store Address</label>
+
+                <input id="settings-address" name="storeAddress" type="text" placeholder="Amman, Jordan" required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="settings-website">Website</label>
+
+                <input id="settings-website" name="storeWebsite" type="text" placeholder="www.faynex.com">
+
+            </div>
+
+            <button type="submit" class="save-btn">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Changes
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+</main>
+
+<!-- JavaScript -->
+
+<script src="../js/main.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/admin-settings.js"></script>
+
+</body>
+
+</html>

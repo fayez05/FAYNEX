@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website Title -->
+    <title>FAYNEX | Page Not Found</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" data-root-link="images/favicon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!--
+        This page can open from any folder (for example /pages/wrong-page),
+        so its CSS is inside the file and its links are made by JavaScript.
+    -->
+    <style>
+
+        /* ==================== Reset ==================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #F1F5F9;
+            color: #111827;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* ==================== Header ==================== */
+
+        .error-header {
+            display: flex;
+            align-items: center;
+            height: 80px;
+            padding: 0 8%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .error-header img {
+            height: 70px;
+            width: auto;
+        }
+
+
+        /* ==================== Error Section ==================== */
+
+        .error-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .error-box {
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+            background-color: white;
+            border-radius: 20px;
+            padding: 50px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .error-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #DBEAFE;
+            color: #2563EB;
+            font-size: 38px;
+        }
+
+        .error-code {
+            font-size: 90px;
+            font-weight: bold;
+            line-height: 1;
+            color: #041e54;
+        }
+
+        .error-box h1 {
+            font-size: 28px;
+            margin: 15px 0 10px;
+        }
+
+        .error-box p {
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .error-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .error-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 26px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .home-btn {
+            background-color: #2563EB;
+            color: white;
+        }
+
+        .home-btn:hover {
+            background-color: #1D4ED8;
+        }
+
+        .shop-btn {
+            background-color: white;
+            color: #2563EB;
+            border: 1px solid #2563EB;
+        }
+
+        .shop-btn:hover {
+            background-color: #EFF6FF;
+        }
+
+
+        /* ==================== Footer ==================== */
+
+        .error-footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #041e54;
+            color: #CBD5E1;
+            font-size: 14px;
+        }
+
+
+        /* ==================== Responsive ==================== */
+
+        @media (max-width: 480px) {
+
+            .error-header {
+                padding: 0 16px;
+            }
+
+            .error-code {
+                font-size: 70px;
+            }
+
+            .error-box h1 {
+                font-size: 23px;
+            }
+
+            .error-actions a {
+                width: 100%;
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ==================== Header ==================== -->
+
+    <header class="error-header">
+
+        <a href="index.html" data-root-link="index.html">
+            <img src="images/FAYNEX-logo.png" data-root-src="images/FAYNEX-logo.png" alt="FAYNEX Logo">
+        </a>
+
+    </header>
+
+
+    <!-- ==================== Error Section ==================== -->
+
+    <main class="error-section">
+
+        <div class="error-box">
+
+            <div class="error-icon">
+                <i class="fa-solid fa-plug-circle-xmark"></i>
+            </div>
+
+            <div class="error-code">404</div>
+
+            <h1>Page Not Found</h1>
+
+            <p>
+                Sorry, the page you are looking for doesn't exist or has been moved.
+                Let's get you back to shopping.
+            </p>
+
+            <div class="error-actions">
+
+                <a href="index.html" class="home-btn" data-root-link="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Back to Home
+                </a>
+
+                <a href="pages/shop.html" class="shop-btn" data-root-link="pages/shop.html">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    Go to Shop
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================== Footer ==================== -->
+
+    <footer class="error-footer">
+
+        © 2026 FAYNEX. All Rights Reserved.
+
+    </footer>
+
+
+    <!-- ==================== JavaScript ==================== -->
+
+    <script>
+
+        /* ==============================
+           1. FIND THE PROJECT ROOT
+           On GitHub Pages the site is inside a folder
+           (username.github.io/FAYNEX/), on other hosts it is "/".
+        ============================== */
+
+        function getProjectRoot() {
+
+            if (window.location.hostname.endsWith("github.io")) {
+                const firstFolder = window.location.pathname.split("/")[1];
+                return firstFolder ? "/" + firstFolder + "/" : "/";
+            }
+
+            return "/";
+        }
+
+
+        /* ==============================
+           2. FIX LINKS AND IMAGES
+        ============================== */
+
+        const projectRoot = getProjectRoot();
+
+        document.querySelectorAll("[data-root-link]").forEach(function (link) {
+            link.href = projectRoot + link.dataset.rootLink;
+        });
+
+        document.querySelectorAll("[data-root-src]").forEach(function (image) {
+            image.src = projectRoot + image.dataset.rootSrc;
+        });
+
+    </script>
+
+</body>
+
+</html>
